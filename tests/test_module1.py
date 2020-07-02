@@ -103,6 +103,7 @@ def test_site_create_dir_function_module1(parse):
     assert path_arg.exists, "Does the `create_dir` method have a `path` argument?"
 
     directory = site.get_by_value("assignment", "directory", create_dir.code)
+
     assert directory.exists, "Are you assigning the correct value to `directory`?"
 
     directory_path = directory.code.find_all("binary_operator", value="/")
